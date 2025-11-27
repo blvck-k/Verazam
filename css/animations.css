@@ -1,0 +1,46 @@
+/* Simple page transition overlay */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.wipe {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.wipe.active {
+  animation: wipeIn 520ms forwards;
+}
+
+@keyframes wipeIn {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Gold shimmer on headings */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.03)
+  );
+  background-size: 200% auto;
+  animation: shimmer 2.2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}

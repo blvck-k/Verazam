@@ -1,0 +1,69 @@
+/* -------- ELECTRICAL THEME COLORS -------- */
+:root {
+    --electrical-bg: #0a1a2f;
+    --electrical-accent: #0096ff;
+    --gold: #d4ac0d;
+}
+
+/* -------- PAGE BACKGROUND -------- */
+body {
+    background: var(--electrical-bg);
+    color: #ffffff;
+}
+
+/* -------- PAGE TITLE STYLING -------- */
+main h1 {
+    color: var(--gold);
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+}
+
+main .muted {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+/* -------- SERVICE GRID -------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* -------- SERVICE CARDS (HTML uses .service) -------- */
+.service {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--electrical-accent);
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.service h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* -------- REVEAL ANIMATIONS (HTML uses .reveal) -------- */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional fade-in keyframes if transitions.js triggers them */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

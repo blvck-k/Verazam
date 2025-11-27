@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Golden — Contact</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+  <div id="page" class="page">
+
+    <!-- Header -->
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">G</div>
+        <div class="title">GOLDEN</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="electrical.html">Electrical</a>
+        <a href="civil.html">Civil</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container section">
+      <h1>Contact</h1>
+      <p class="muted">
+        Get in touch to discuss partnerships or services.
+      </p>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="#" onsubmit="return handleContact(event)">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" id="subject" placeholder="Subject" />
+        <textarea id="message" placeholder="Message" rows="6"></textarea>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+
+      <!-- Form Status -->
+      <div id="form-status" class="muted"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © <span id="year6"></span> Verazam — Building a legacy of wealth and opportunity.
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/transitions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
