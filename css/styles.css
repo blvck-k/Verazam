@@ -55,9 +55,17 @@ nav {
     cursor: pointer;
     color: var(--white);
 }
+.nav-links.active {
+    display: flex; /* Show when the toggle is active */
+}
 .nav-links {
-    display: flex;
-    align-items: center;
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column; /* Stack links in a column */
+    width: 100%;
+    position: absolute; /* Show below nav */
+    top: 60px; /* Adjust top position based on your navbar height */
+    left: 0;
+    background: var(--navy); /* Make background visible */
 }
 .nav-links a {
     color: var(--white);
