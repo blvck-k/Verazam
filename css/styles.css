@@ -1,158 +1,152 @@
 :root {
-  --navy: #081428;
-  --royal-blue: #0B1F3A;
-  --gold: #D4AF37;
-  --soft-gold: #F5D67B;
-  --white: #FFFFFF;
-  --light-gray: #F4F4F4;
+    --navy: #081428;
+    --royal-blue: #0B1F3A;
+    --gold: #D4AF37;
+    --soft-gold: #F5D67B;
+    --white: #FFFFFF;
+    --light-gray: #F4F4F4;
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: var(--white);
-  color: var(--navy);
-  line-height: 1.6; /* Adjusted line-height */
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.5; /* Adjusted line-height for better readability */
 }
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
 }
 section {
-  padding: 60px 20px; /* Adjust padding */
-  min-height: 100vh; /* Ensure sections fill the mobile screen */
+    padding: 40px 20px; /* Reduced padding for all sections */
 }
 .container {
-  max-width: 1200px;
-  margin: auto;
+    max-width: 1200px;
+    margin: auto;
 }
 /* NAV */
 nav {
-  background: var(--navy);
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    background: var(--navy);
+    padding: 10px; /* Reduced padding for nav */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* To handle layout on smaller screens */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Responsive handling */
 }
 .logo {
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 22px;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 20px; /* Slightly smaller logo size */
 }
 .menu-toggle {
-  display: none; /* Hide on larger screens */
-  cursor: pointer;
-  color: var(--white);
+    display: none;
+    cursor: pointer;
+    color: var(--white);
 }
 .nav-links {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 .nav-links a {
-  color: var(--white);
-  margin-left: 15px; /* Adjusted for mobile */
-  text-decoration: none;
-  position: relative;
+    color: var(--white);
+    margin-left: 10px; /* Adjusted margin */
+    padding: 5px; /* Padding for better touch targets */
+    text-decoration: none;
+    position: relative;
 }
 .nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background: var(--gold);
-  transition: 0.3s;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: var(--gold);
+    transition: 0.3s;
 }
 .nav-links a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 .cta-btn {
-  background: linear-gradient(to right, var(--gold), var(--soft-gold));
-  color: var(--navy);
-  padding: 10px 15px; /* Adjusted button padding */
-  border-radius: 5px;
-  font-weight: 600;
+    background: linear-gradient(to right, var(--gold), var(--soft-gold));
+    color: var(--navy);
+    padding: 8px 12px; /* Adjusted button padding */
+    border-radius: 5px;
+    font-weight: 600;
 }
 .hero {
-  background: linear-gradient(to right, var(--royal-blue), var(--navy));
-  color: white;
-  text-align: center;
-  padding: 100px 20px; /* Adjust padding for hero section */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content */
-  align-items: center; /* Center content */
-  height: 100vh; /* Ensure hero section fills screen height */
+    /* Adjusted to not take full viewport height */
+    background: linear-gradient(to right, var(--royal-blue), var(--navy));
+    color: white;
+    text-align: center;
+    padding: 50px 20px; /* Reduced padding */
 }
 .hero h1 {
-  font-size: 36px; /* Font size adjustment */
-  margin-bottom: 15px; /* Adjusted margin */
+    font-size: 28px; /* Adjusted size for better fit */
+    margin-bottom: 10px; /* Adjust margin */
 }
 .page-header {
-  background: var(--royal-blue);
-  color: white;
-  text-align: center;
-  padding: 80px 20px; /* Adjust padding */
+    background: var(--royal-blue);
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Reduced padding */
 }
 .section-title {
-  text-align: center;
-  margin-bottom: 15px; /* Adjusted margin */
-  font-size: 28px; /* Title size */
+    text-align: center;
+    margin-bottom: 10px; /* Reduced margin to minimize scrolling */
+    font-size: 24px; /* Title size adjustment */
 }
 .gold-divider {
-  width: 60px; /* Adjusted divider width */
-  height: 3px;
-  background: var(--gold);
-  margin: 10px auto; /* Adjusted margin */
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 10px auto; 
 }
 footer {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 20px; /* Adjust footer padding */
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 15px; /* Reduced footer padding */
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Hide by default for mobile */
-    flex-direction: column; /* Align links vertically */
-    width: 100%; /* Full width */
-    position: absolute; /* Positioning for dropdown menu */
-    top: 60px; /* Position below the nav */
-    left: 0;
-    background: var(--navy); /* Background color for visibility */
-  }
-  
-  .nav-links.active {
-    display: flex; /* Show links when active */
-  }
-  .menu-toggle {
-    display: block; /* Show toggle button on mobile */
-  }
-  .cta-btn {
-    padding: 8px 12px; /* Adjust for mobile */
-  }
-  section {
-    padding: 40px 20px; /* Further reduce padding for mobile */
-  }
-  
-  .hero h1 {
-    font-size: 28px; /* Font size adjustment for mobile */
-  }
-  .section-title {
-    font-size: 24px; /* Title size adjustment for mobile */
-  }
+    .nav-links {
+        display: none; /* Hide by default */
+        flex-direction: column; 
+        width: 100%; 
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+        background: var(--navy); 
+    }
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+    .menu-toggle {
+        display: block; /* Show toggle button */
+    }
+    section {
+        padding: 20px 10px; /* Reduce padding for mobile */
+    }
+    .hero h1 {
+        font-size: 22px; /* Smaller font size for mobile */
+    }
+    .section-title {
+        font-size: 20px; /* Adjust for mobile readability */
+    }
+    .cta-btn {
+        padding: 6px 10px; /* Mobile button size */
+    }
 }
