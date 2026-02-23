@@ -18,13 +18,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: var(--white);
   color: var(--navy);
-  line-height: 1.4; /* Slightly reduced line-height */
+  line-height: 1.6; /* Adjusted line-height */
 }
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 section {
-  padding: 60px 20px; /* Reduced padding for sections */
+  padding: 60px 20px; /* Adjust padding */
+  min-height: 100vh; /* Ensure sections fill the mobile screen */
 }
 .container {
   max-width: 1200px;
@@ -33,7 +34,7 @@ section {
 /* NAV */
 nav {
   background: var(--navy);
-  padding: 15px; /* Adjusted padding for nav */
+  padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -43,11 +44,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* To handle layout on smaller screens */
 }
 .logo {
   color: var(--gold);
   font-weight: 700;
   font-size: 22px;
+}
+.menu-toggle {
+  display: none; /* Hide on larger screens */
+  cursor: pointer;
+  color: var(--white);
 }
 .nav-links {
   display: flex;
@@ -55,7 +62,7 @@ nav {
 }
 .nav-links a {
   color: var(--white);
-  margin-left: 15px; /* Reduced margin between links */
+  margin-left: 15px; /* Adjusted for mobile */
   text-decoration: none;
   position: relative;
 }
@@ -75,67 +82,77 @@ nav {
 .cta-btn {
   background: linear-gradient(to right, var(--gold), var(--soft-gold));
   color: var(--navy);
-  padding: 10px 15px; /* Slightly adjusted button padding */
+  padding: 10px 15px; /* Adjusted button padding */
   border-radius: 5px;
   font-weight: 600;
-  margin-left: 15px; /* Reduced margin */
 }
 .hero {
   background: linear-gradient(to right, var(--royal-blue), var(--navy));
   color: white;
   text-align: center;
-  padding: 100px 20px; /* Reduced padding for hero section */
+  padding: 100px 20px; /* Adjust padding for hero section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content */
+  align-items: center; /* Center content */
+  height: 100vh; /* Ensure hero section fills screen height */
 }
 .hero h1 {
-  font-size: 36px; /* Slightly smaller font size */
+  font-size: 36px; /* Font size adjustment */
   margin-bottom: 15px; /* Adjusted margin */
 }
 .page-header {
   background: var(--royal-blue);
   color: white;
   text-align: center;
-  padding: 80px 20px; /* Changed padding for page header */
+  padding: 80px 20px; /* Adjust padding */
 }
 .section-title {
   text-align: center;
-  margin-bottom: 15px; /* Reduced bottom margin */
-  font-size: 28px; /* Reduced title size for better readability */
+  margin-bottom: 15px; /* Adjusted margin */
+  font-size: 28px; /* Title size */
 }
 .gold-divider {
   width: 60px; /* Adjusted divider width */
   height: 3px;
   background: var(--gold);
-  margin: 10px auto; /* Reduced margin */
+  margin: 10px auto; /* Adjusted margin */
 }
 footer {
   background: var(--navy);
   color: white;
   text-align: center;
-  padding: 20px; /* Reduced footer padding */
+  padding: 20px; /* Adjust footer padding */
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
   .nav-links {
-    flex-direction: column; /* Stack links vertically */
-    display: none; /* Hide by default */
+    display: none; /* Hide by default for mobile */
+    flex-direction: column; /* Align links vertically */
+    width: 100%; /* Full width */
+    position: absolute; /* Positioning for dropdown menu */
+    top: 60px; /* Position below the nav */
+    left: 0;
+    background: var(--navy); /* Background color for visibility */
   }
+  
   .nav-links.active {
-    display: flex; /* Show when active */
+    display: flex; /* Show links when active */
   }
   .menu-toggle {
-    display: block; /* Show toggle button */
+    display: block; /* Show toggle button on mobile */
+  }
+  .cta-btn {
+    padding: 8px 12px; /* Adjust for mobile */
   }
   section {
-    padding: 40px 20px; /* Additional padding adjustments for mobile */
+    padding: 40px 20px; /* Further reduce padding for mobile */
   }
   
   .hero h1 {
-    font-size: 28px; /* Font size for mobile */
+    font-size: 28px; /* Font size adjustment for mobile */
   }
   .section-title {
-    font-size: 24px; /* Title size for mobile */
-  }
-  .cta-btn {
-    padding: 8px 12px; /* Adjust button padding for mobile */
+    font-size: 24px; /* Title size adjustment for mobile */
   }
 }
